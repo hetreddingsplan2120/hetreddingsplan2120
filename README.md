@@ -3,8 +3,8 @@
 </div>
 
 <div align="center">
-  <h3>👋 Hey there, I'm <b>[Jouw Naam]</b></h3>
-  <p>Web enthusiast | Project creator | Front-end & Back-end explorer</p>
+  <h3>👋 Hallo wij zijn <b>Abel, Thomas, Irenen en Vera</b></h3>
+  <p>Dit is ons project voor de plusklas wetenschapssknooppunt wedstrijd</p>
   
   <p>
     <a href="https://twitter.com/"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" /></a>
@@ -19,12 +19,11 @@
 
 ---
 
-## 🧠 About This Project
+## 🧠 Over ons project
 
 ```javascript
 const HetReddingsplan2120 = {
-  description: "A web project focusing on [kort uitleg van je project]",
-  technologies: ["HTML", "CSS", "JavaScript"],
-  currentFocus: "Making the website interactive and visually appealing",
-  funFact: "Built with ❤️ and cool CSS effects"
+  description: "We gaan een plan maken hoe we in de toekomst gaan overleven",
+  currentFocus: "Een plan maken",
+  funFact: "Gemaakt met ❤️"
 };
