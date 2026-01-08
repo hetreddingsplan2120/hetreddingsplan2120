@@ -22,7 +22,7 @@
 
 <div align="center">
   
-  <img src="https://komarev.com/ghpvc/?username=[hetreddingsplan2120]&style=flat-square&color=blue" alt="Profile views"/>
+  <img src="https://komarev.com/ghpvc/?username=hetreddingsplan2120&style=flat-square&color=blue" alt="Profile views"/>
 </div>
 
 ---
