@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h3>👋 Hallo wij zijn <b>Abel, Thomas, Irenen en Vera</b></h3>
+  <h3>👋 Hallo wij zijn <b>Abel, Thomas, Irene en Vera</b></h3>
   <p>Dit is ons project voor de plusklas wetenschapssknooppunt wedstrijd</p>
   
   <p>
