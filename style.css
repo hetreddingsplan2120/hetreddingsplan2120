@@ -52,3 +52,7 @@ a:hover,
 button:hover {
   cursor: url("cursor-hover.png"), pointer;
 }
+
+a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
