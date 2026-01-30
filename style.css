@@ -66,3 +66,31 @@ a,
 li {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1f466d;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-bar button:hover {
+  background-color: #163555;
+}
