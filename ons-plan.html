@@ -14,13 +14,57 @@
     <a href="ons-plan.html">Ons plan</a>
     <a href="verslag.html">Het verslag</a>
     <a href="bronnen.html">De bronnen</a>   
-     <form class="search-bar">
-  <input type="search" placeholder="Zoeken..." />
+  <form class="search-bar" onsubmit="siteSearch(event)">
+  <input type="search" id="searchInput" placeholder="Zoeken..." />
   <button type="submit">🔍</button>
-</form> 
+</form>
+<main>
+    <div id="searchResults"></div>
+
+</main>
 </div>
 <p><i>Dit is ons plan</i></p>
     <img src="/plaatjes/Aan deze pagina word nog gewerkt.png" alt="nog even geduld" width="400" height="500">
 <p><i>Nog even geduld…</i></p>
+<script>
+const pages = [
+  { title: "Home", url: "index.html", content: "home nederland 2120 klimaat toekomst" },
+  { title: "Info", url: "info.html", content: "informatie klimaat water landgebruik" },
+  { title: "Ons plan", url: "ons-plan.html", content: "ons plan oplossingen toekomst" },
+  { title: "Het verslag", url: "verslag.html", content: "verslag onderzoek klimaat" },
+  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" }
+];
+
+function siteSearch(event) {
+  event.preventDefault();
+
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const resultsDiv = document.getElementById("searchResults");
+  resultsDiv.innerHTML = "";
+
+  if (query.length === 0) return;
+
+  const results = pages.filter(page =>
+    page.title.toLowerCase().includes(query) ||
+    page.content.includes(query)
+  );
+
+  if (results.length === 0) {
+    resultsDiv.innerHTML = "<p>Geen resultaten gevonden.</p>";
+    return;
+  }
+
+  const ul = document.createElement("ul");
+
+  results.forEach(result => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${result.url}">${result.title}</a>`;
+    ul.appendChild(li);
+  });
+
+  resultsDiv.appendChild(ul);
+}
+</script>
+
 </body>
 </html>
