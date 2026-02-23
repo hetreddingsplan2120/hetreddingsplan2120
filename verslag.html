@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2120</title>
-     <link rel="stylesheet" href="style.css">
-   
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- NAVBAR -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="info.html">Info</a>
     <a href="ons-plan.html">Ons plan</a>
     <a href="verslag.html">Het verslag</a>
     <a href="bronnen.html">De bronnen</a>
-        <a href="downloads.html">Downloads</a>
+    <a href="downloads.html">Downloads</a>
     <a href="contact.html">Contact</a>
     <a href="updates.html">Nieuws & Updates</a>
-<form class="search-bar" onsubmit="siteSearch(event)">
-  <input type="search" id="searchInput" placeholder="Zoeken..." />
-  <button type="submit">🔍</button>
-</form>
+
+    <form class="search-bar" onsubmit="siteSearch(event)">
+        <input type="search" id="searchInput" placeholder="Zoeken..." />
+        <button type="submit">🔍</button>
+    </form>
+</div>
+
+<!-- SEARCH RESULTS -->
 <main>
     <div id="searchResults"></div>
-
 </main>
-</div>
+
 <p><i>Hier is ons verslag</i></p>
-    <img src="/plaatjes/Aan deze pagina word nog gewerkt.png" alt="nog even geduld" width="400" height="500">
+
+<img src="/plaatjes/Aan deze pagina word nog gewerkt.png" 
+     alt="nog even geduld" 
+     width="400" 
+     height="500">
+
 <p><i>Nog even geduld…</i></p>
+
+<!-- DOWNLOAD LINK -->
+<a href="downloads/samenvatting_definitief_verslag.pdf" download>
+    Download samenvatting definitief verslag
+</a>
+
 <script>
 const pages = [
   { title: "Home", url: "index.html", content: "home nederland 2120 klimaat toekomst" },
   { title: "Info", url: "info.html", content: "informatie klimaat water landgebruik" },
   { title: "Ons plan", url: "ons-plan.html", content: "ons plan oplossingen toekomst" },
   { title: "Het verslag", url: "verslag.html", content: "verslag onderzoek klimaat" },
-  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" }
-  { title: "Nieuws", url: "updates.html", content: "nieuws / updates"}
-  {title:  "Contact us", url: "contact.html", cotent: "contact us"}
+  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" },
+  { title: "Nieuws", url: "updates.html", content: "nieuws updates" },
+  { title: "Contact us", url: "contact.html", content: "contact us" }
 ];
 
 function siteSearch(event) {
@@ -51,7 +67,7 @@ function siteSearch(event) {
 
   const results = pages.filter(page =>
     page.title.toLowerCase().includes(query) ||
-    page.content.includes(query)
+    page.content.toLowerCase().includes(query)
   );
 
   if (results.length === 0) {
