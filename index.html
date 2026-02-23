@@ -30,49 +30,8 @@
 <h1>Het Reddingsplan Voor 2120</h1>
 <img src="plaatjes/voorkant.png" width="2200" height="500" alt="voorkant"
 
-<script>
 
 
-const pages = [
-  { title: "Home", url: "index.html", content: "home nederland 2120 klimaat toekomst" },
-  { title: "Info", url: "info.html", content: "informatie klimaat water landgebruik" },
-  { title: "Ons plan", url: "ons-plan.html", content: "ons plan oplossingen toekomst" },
-  { title: "Het verslag", url: "verslag.html", content: "verslag onderzoek klimaat" },
-  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" }
-  { title: "Nieuws", url: "updates.html", content: "nieuws / updates"}
-  {title:  "Contact us", url: "contact.html", cotent: "contact us"}
-];
-
-function siteSearch(event) {
-  event.preventDefault();
-
-  const query = document.getElementById("searchInput").value.toLowerCase();
-  const resultsDiv = document.getElementById("searchResults");
-  resultsDiv.innerHTML = "";
-
-  if (query.length === 0) return;
-
-  const results = pages.filter(page =>
-    page.title.toLowerCase().includes(query) ||
-    page.content.includes(query)
-  );
-
-  if (results.length === 0) {
-    resultsDiv.innerHTML = "<p>Geen resultaten gevonden.</p>";
-    return;
-  }
-
-  const ul = document.createElement("ul");
-
-  results.forEach(result => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${result.url}">${result.title}</a>`;
-    ul.appendChild(li);
-  });
-
-  resultsDiv.appendChild(ul);
-}
-</script>
 
 </body>
 </html>
