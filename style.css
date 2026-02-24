@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional */
+  background-attachment: fixed; 
   cursor: url("cursor-normaal.png"), auto;
 }
 
@@ -46,7 +46,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
-  flex-wrap: wrap; /* Makes it responsive */
+  flex-wrap: wrap; 
 }
 
 .navbar a {
