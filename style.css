@@ -1,3 +1,8 @@
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,10 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(/plaatjes/achtergrond-home.png);
+  background-image: url("/plaatjes/achtergrond-home.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional */
   cursor: url("cursor-normaal.png"), auto;
 }
 
@@ -40,6 +46,7 @@ p {
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
+  flex-wrap: wrap; /* Makes it responsive */
 }
 
 .navbar a {
@@ -47,7 +54,7 @@ p {
   text-decoration: none;
   padding: 10px 20px;
   font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 4px;
   font-family: Arial, sans-serif;
 }
@@ -87,13 +94,16 @@ li {
   border-radius: 4px;
   background-color: #1f466d;
   color: white;
-  cursor: pointer;
   font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .search-bar button:hover {
   background-color: #163555;
 }
-.h1 {
+
+
+h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
