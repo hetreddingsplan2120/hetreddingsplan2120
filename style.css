@@ -94,3 +94,6 @@ li {
 .search-bar button:hover {
   background-color: #163555;
 }
+.h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
