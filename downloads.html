@@ -4,53 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2120</title>
-     <link rel="stylesheet" href="style.css">
-   
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="info.html">Info</a>
     <a href="verslag.html">Het verslag</a>
     <a href="bronnen.html">De bronnen</a>
-        <a href="downloads.html">Downloads</a>
-
+    <a href="downloads.html">Downloads</a>
     <a href="ons-ontwerp.html">Ons Ontwerp</a>
 
-<form class="search-bar" onsubmit="siteSearch(event)">
-  <input type="search" id="searchInput" placeholder="Zoeken..." />
-  <button type="submit">🔍</button>
-</form>
+    <form class="search-bar" onsubmit="siteSearch(event)">
+        <input type="search" id="searchInput" placeholder="Zoeken..." />
+        <button type="submit">🔍</button>
+    </form>
+</div>
+
 <main>
     <div id="searchResults"></div>
-
 </main>
-</div>
+
 <p><i>Hier zijn de downloads, deze files zijn van wur.nl</i></p>
 
-<a href="downloads/de_stad_van_natuurlijk-wageningen_university_and_research_565411 (1).pdf" <button></a></button>
-<a href="downloads/een_watergestuurde_regio_vallei_en_veluwe_in-wageningen_university_and_research_672314.pdf" <button>De stad van 2120, natuurlijk! - NL</a></button>
-<a href="downloads/FolderKennisregioaanZee-drukwerkversie-23juni2021_0.pdf" download>FolderKennisregioaanZee-drukwerkversie-23juni2021_0 </a>
-<a href="downloads/imagining_a_naturebased_future_for_europe_in_natu-wageningen_university_and_research_637123.pdf"<button></a>The city of 2120: all natural, of course! - EN</button>
-<a href="downloads/wageningen_in_gegronde_stad_van_de_wereld-wageningen_university_and_research_676813.pdf" <button>
-wageningen_in_gegronde_stad_van_de_wereld-wageningen_university_and_research_676813</a></button>
-<a href="downloads/welkom_in_de_toekomst_groene_metropoolregio_arnhe-wageningen_university_and_research_644014.pdf" <button>Rapport: Een natuurlijker toekomst voor Nederland in 2120 (NL)</a></button>
-<a href="downloads/WURRapport-EennatuurlijkeretoekomstvoorNederlandin2120.pdf" <button>WURRapport-EennatuurlijkeretoekomstvoorNederlandin2120</a></button>
-<p><i>Deze hebben we zelf gemaakt</i></p>
-<a href="taakverdelingverslag1.html" <button>Taakverdeling verslag</button>
-<a href="ideeenvoordetoekomst.html" <button>De ideeën voor de toekomst</button>
-<a href="taakverdeling.html" <button>De Taakverdeling</button>
+<a href="downloads/de_stad_van_natuurlijk-wageningen_university_and_research_565411 (1).pdf" download>
+    <button>De stad van 2120, natuurlijk! - NL</button>
+</a>
 
-    
+<a href="downloads/een_watergestuurde_regio_vallei_en_veluwe_in-wageningen_university_and_research_672314.pdf" download>
+    <button>Een watergestuurde regio - NL</button>
+</a>
+
+<a href="downloads/FolderKennisregioaanZee-drukwerkversie-23juni2021_0.pdf" download>
+    <button>Folder Kennisregio aan Zee</button>
+</a>
+
+<a href="downloads/imagining_a_naturebased_future_for_europe_in_natu-wageningen_university_and_research_637123.pdf" download>
+    <button>The city of 2120: all natural, of course! - EN</button>
+</a>
+
+<a href="downloads/wageningen_in_gegronde_stad_van_de_wereld-wageningen_university_and_research_676813.pdf" download>
+    <button>Wageningen in gegronde stad van de wereld</button>
+</a>
+
+<a href="downloads/welkom_in_de_toekomst_groene_metropoolregio_arnhe-wageningen_university_and_research_644014.pdf" download>
+    <button>Een natuurlijker toekomst voor Nederland in 2120 (NL)</button>
+</a>
+
+<a href="downloads/WURRapport-EennatuurlijkeretoekomstvoorNederlandin2120.pdf" download>
+    <button>WUR Rapport 2120</button>
+</a>
+
+<p><i>Deze hebben we zelf gemaakt</i></p>
+
+<a href="taakverdelingverslag1.html">
+    <button>Taakverdeling verslag</button>
+</a>
+
+<a href="ideeenvoordetoekomst.html">
+    <button>De ideeën voor de toekomst</button>
+</a>
+
+<a href="taakverdeling.html">
+    <button>De Taakverdeling</button>
+</a>
+
 <script>
 const pages = [
   { title: "Home", url: "index.html", content: "home nederland 2120 klimaat toekomst" },
   { title: "Info", url: "info.html", content: "informatie klimaat water landgebruik" },
   { title: "Ons plan", url: "ons-plan.html", content: "ons plan oplossingen toekomst" },
   { title: "Het verslag", url: "verslag.html", content: "verslag onderzoek klimaat" },
-  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" }
-  { title: "Nieuws", url: "updates.html", content: "nieuws / updates"}
-  {title:  "Contact us", url: "contact.html", cotent: "contact us"}
+  { title: "Bronnen", url: "bronnen.html", content: "bronnen wur fnv wikipedia" },
+  { title: "Nieuws", url: "updates.html", content: "nieuws updates" },
+  { title: "Contact us", url: "contact.html", content: "contact us" }
 ];
 
 function siteSearch(event) {
@@ -64,7 +92,7 @@ function siteSearch(event) {
 
   const results = pages.filter(page =>
     page.title.toLowerCase().includes(query) ||
-    page.content.includes(query)
+    page.content.toLowerCase().includes(query)
   );
 
   if (results.length === 0) {
